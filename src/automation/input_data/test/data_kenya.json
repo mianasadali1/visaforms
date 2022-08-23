@@ -1,0 +1,87 @@
+{
+    "country": "kenya",
+    "data": {
+      "submiter_email": "mianasadali@gmail.com",
+      "submiter_password": "123456",
+
+      "nationality_at_birth": "United States of America",
+      "present_nationality_if_different": "United States of America",
+      "applicant_continent_of_residence": "North America",
+      "applicant_country_of_residence": "United States of America",
+      "applicant_physical_address": "Applicants Physical address",
+      "applicant_phone_number": "123456789",
+      "applicant_city_town": "New York",
+      "email": "jegoyi7874@naluzotan.com",
+
+      "passport_number": "AX123456",
+      "passport_place_issue": "USA",
+      "passport_date_issue": "24-02-2002",
+      "passport_date_expiry": "24-02-2030",
+      "passport_issued_by": "Issued by USA",
+
+      "previous_visits_to_kenya": [ 
+        {
+          "date": "01/03/2002",
+          "duration": "< 2 Weeks",
+          "evisa_number": "AX1234568"
+        },
+        {
+          "date": "02/04/2005",
+          "duration": "< 3 Months",
+          "evisa_number": "AX1234569"
+        }
+      ],
+
+
+      "surname": "Bower",
+      "given_name": "James",
+      "applicant_gender": "Male",
+      "applicant_marital_status": "Single",
+      "date_of_birth": "01-02-2006",
+      "applicant_current_ocupation": "Student",
+      "applicant_father_status": "Alive",
+      "applicant_father_name": "Dads name",
+      "applicant_mother_status": "Deceased",
+      "applicant_mother_name": "Moms name",
+      "applicant_next_of_kin_name": "Next of kin name",
+      "applicant_next_of_kin_number": "123456789",
+
+
+      "applicant_reason_for_travek": "Tourism",
+      "applicant_proposed_date_of_entry": "23-03-2022",
+      "applicant_proposed_departure_from_entry": "23-03-2022",
+      "host_detail": "Hotel",
+      "full_names_and_physical_address_of_the_host": "Bla bla bla",
+      "host_telephone_number": "123456789",
+      "host_email": "asd@gmail.com",
+      "applicant_arrives_by": "Air",
+      "point_of_entry": "JKIA Nairobi",
+
+
+      "recent_visits_to_other_countries_in_3_months": [
+        {
+          "date": "01/01/2022",
+          "duration": "< 2 Weeks",
+          "country": "Albania"
+        },
+        {
+          "date": "02/02/2022",
+          "duration": "< 3 Months",
+          "country": "Algeria"
+        }
+      ],
+
+      "photo_recent_passport_size": "src/automation/input_data/image-350x350.jpg",
+      "photo_passport_front_cover": "src/automation/input_data/image-350x350.jpg",
+      "photo_passport_biodata_page": "src/automation/input_data/image-350x350.jpg",
+      "photo_hotel_reservation": "src/automation/input_data/image-350x350.jpg",
+
+      "card_number": "1234567894561233",
+      "card_cvv": "1234",
+      "card_expiration_month": "01",
+      "card_expiration_year": "2029"
+
+
+    }
+  
+  }

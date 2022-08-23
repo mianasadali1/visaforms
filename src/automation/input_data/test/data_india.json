@@ -1,0 +1,66 @@
+{
+    "country": "india",
+    "data": {
+      "nationality": "UNITED STATES OF AMERICA",
+      "port_of_arrival": "CHENNAI AIRPORT",
+      "date_of_birth": "01/01/1989",
+      "email": "bafipo3991@balaket.com",
+      "expected_date_of_arrival": "01/06/2022",
+
+      "surname": "Peter",
+      "given_name": "Bohm",
+      "gender": "Male",
+      "city_of_birth": "LOS ANGELES",
+      "country_of_birth": "UNITED STATES OF AMERICA",
+      "religion": "CHRISTIAN",
+      "educational_qualification": "GRADUATE",
+      "how_did_you_aquired_nationality": "By Birth",
+      "have_you_lived_2_years": "Yes",
+      "passport_number": "123456789",
+      "passport_place_issue": "UNITED STATES",
+      "passport_date_issue": "20/02/2020",
+      "passport_date_expiry": "20/02/2029",
+
+      "present_house_number_and_street": "123 ELM ST",
+      "present_city": "LOS ANGELES",
+      "present_country": "UNITED STATES OF AMERICA",
+      "present_district": "CA",
+      "present_zip_code": "123546",
+      "present_phone_number": "1235467890",
+
+      "father_name": "Father name",
+      "father_nationality": "UNITED STATES OF AMERICA",
+      "father_place_of_birth": "NEW YORK",
+      "father_country": "UNITED STATES OF AMERICA",
+      "mother_name": "Mother name",
+      "mother_nationality": "UNITED STATES OF AMERICA",
+      "mother_place_of_birth": "NEW YORK",
+      "mother_country": "UNITED STATES OF AMERICA",
+
+      "are_parents_from_pakistan": "No",
+      "parents_from_pakistan_details": "They are my family",
+
+      "profession_present_occupation": "AIR FORCE",
+      "profession_employer_name": "Airbus",
+      "profession_address": "US CA",
+
+      "places_to_be_visited": "DELHI",
+      "expected_port_of_exit_from_india": "CHENNAI AIRPORT",
+      "have_you_visited_india_before": "No",
+      "countries_visited_last_10_years": [
+        "ALBANIA",
+        "EGYPT"
+      ],
+      "reference_name_in_india": "Indian name",
+      "reference_address": "Asfasfg as ",
+      "reference_state": "KERALA",
+      "reference_district": "PALAKKAD",
+      "reference_phone": "123456789",
+      "reference_name_in_us": "American ref",
+      "reference_address_in_us": "2143 ELM",
+      "reference_phone_in_us": "123456789",
+
+      "user_photo_file_path": "src/automation/input_data/image-350x350.jpg",
+      "user_passport_file_path": "src/automation/input_data/passport.pdf"
+    }
+  }

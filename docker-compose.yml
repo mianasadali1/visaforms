@@ -1,0 +1,94 @@
+version: '3'
+services:
+  db:
+    image: postgres:13.3
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db-data:/data/postgres
+
+  web:
+    build:
+      context: .
+      args:
+        REQUIREMENTS_FILE: dev.txt
+    restart: unless-stopped
+    ports:
+      - 8001:8000
+    env_file: .env
+    command: 'sh -c "cp pre-commit.example .git/hooks/pre-commit && chmod -R 777 /app/files/ && chmod +x .git/hooks/pre-commit && ./manage.py migrate && ./manage.py runserver 0.0.0.0:8000"'
+    volumes:
+      - ./:/app
+      - shared_downloads:/app/files/
+    depends_on:
+      - db
+      - chrome
+
+  queue:
+    build:
+      context: .
+      args:
+        REQUIREMENTS_FILE: dev.txt
+    restart: unless-stopped
+    env_file: .env
+    command: sh /entrypoint-queue.sh
+    volumes:
+      - ./:/app
+      - shared_downloads:/app/files/
+
+  beat:
+    build:
+      context: .
+      args:
+        REQUIREMENTS_FILE: dev.txt
+    restart: unless-stopped
+    env_file: .env
+    command: sh /entrypoint-beat.sh
+    volumes:
+      - ./:/app
+
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+    ports:
+      - 6379:6379
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    restart: unless-stopped
+    ports:
+      - 1025:1025
+      - 8025:8025
+
+  selenium-hub:
+    image: selenium/hub:4.1.2-20220208
+    container_name: selenium-hub
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444" # Selenium grid http://localhost:4444/
+    restart: unless-stopped
+
+  chrome:
+    image: selenium/node-chrome:4.1.2-20220208
+    shm_size: 2gb
+    volumes:
+      - shared_downloads:/home/seluser/Downloads
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    ports:
+      - "7900:7900" # noVNC http://localhost:7900/ pass=secret
+    restart: unless-stopped
+
+volumes:
+  db-data:
+  shared_downloads:
