@@ -209,7 +209,7 @@ class VisaApplicantionTurkey(VisaApplicantionBase):
             self.step_personal_information()
             self.step_confirmation()
             self.submitted = dt.now()
-            sleep(60)
+            time.sleep(60)
             self.get_payment_link_from_email()
             self.fill_payment_form()
             logger.critical(self.refid)
