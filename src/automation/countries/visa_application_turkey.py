@@ -133,6 +133,14 @@ class VisaApplicantionTurkey(VisaApplicantionBase):
         el = self.driver.find_element(By.ID, "txtadres")
         el.send_keys(self.address)
 
+        el = self.driver.find_element(By.ID, "onamcheck")
+        el.click()
+        time.sleep(2)
+
+        el = self.driver.find_element(By.ID, "cboxClose")
+        el.click()
+        time.sleep(2)
+
         el = self.driver.find_element(By.ID, "btnSubmit")
         el.click()
 
